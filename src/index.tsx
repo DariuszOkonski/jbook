@@ -1,12 +1,13 @@
 import { useState } from 'react';
 import ReactDom from 'react-dom';
 
+
 const App = () => {
     const [input, setInput] = useState<string>('')
     const [code, setCode] = useState<string>('')
 
     const onClick = () => {
-        console.log(input)
+        
     }
 
     return (
