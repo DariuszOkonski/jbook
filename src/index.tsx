@@ -22,12 +22,17 @@ const App = () => {
     
 
 
-    const onClick = () => {
+    const onClick = async () => {
         if(!ref.current) {
             return;
         }
         
-        ref.current.transform();
+        const result = await ref.current.transform(input, {
+            loader: 'jsx',
+            target: 'es2015'
+        });
+
+        setCode(result.code)
     }
 
     return (
